@@ -3,4 +3,4 @@ project(roadtocpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(roadtocpp main.cpp)
+add_executable(roadtocpp first.c)

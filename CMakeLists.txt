@@ -3,5 +3,7 @@ project(roadtocpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(roadtocpp first.c myfirst.cpp myfirst.h dynamic/dynamic.cpp)
+#add_executable(roadtocpp first.c myfirst.cpp myfirst.h dynamic/dynamic.cpp)
+add_executable(myfirst myfirst.cpp)
 add_executable(187 question187.cpp)
+add_executable(first first.c)

@@ -12,7 +12,7 @@ public:
     vector<string> findRepeatedDnaSequences(string s) {
         cout << "findRepeatedDnaSequences" << s << endl;  //<<符号实际上是运算符的重载,它也有按位操作的意思,这里则是把字符串赋给输出流
         unordered_map<size_t,int> MP;
-        hash<string> hash_fn;
+        hash<string> hash_fn;   //这个的含义不是定义一个变量,而是引入了std:hash函数
         vector<string> ret;
 
         for(int i = 0; i < int(s.size()) - 9; ++i)

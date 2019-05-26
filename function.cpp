@@ -12,7 +12,7 @@ int sum_arr(const int *begin, const int *end);  //参数为数组的开始和结
 
 int c_in_str(const char *str);  //c风格的字符串,其实就是一个字符数组
 
-char * build_str(char c, int n); //返回指针的函数
+char * build_str(char c = 'a', int n = 1); //返回指针的函数, 这里指定了默认值,如果不传该参数,那么就会被默认赋这个值
 
 void swap(int & a, int & b);  //以引用作为形参的函数
 void swapoint(int * a, int * b);  //指针版交换变量函数
@@ -34,6 +34,13 @@ const std::array<std::string, seasons> snames = {"Spring", "Summber", "Fall", "W
 void fill(std::array<double, seasons> * pa);  //这句写在using前,就必须加std::了,否则编译报错
 using namespace std;
 void fill(array<double, seasons> * pa);  //写在using后就不用写std::了,这很现实
+
+void fellow(polar & polar);
+
+template <typename T>  //type是泛型关键词,也可以写成class,这里的T就是泛型
+void templatefunc(T & polar);   //模板函数,含有泛型
+
+template <> void templatefunc<polar>(polar & polar); //模板函数的显示具体化,比普通模板函数优先级高
 
 int main() {
 
@@ -102,6 +109,16 @@ int main() {
     cout << "after swap, a = " << a << " b = " << b << endl;
     swapoint(&a, &b);   //指针作为形参的函数,传值的时候必须传递变量地址
     cout << "after pointer swap, a = " << a << " b = " << b << endl;
+
+
+    polar polar2 = {123, 456};  //结构体的初始化
+    fellow(polar2);  //结构体也是能够用引用来传参的
+    cout << "after & operatr polar2.anglre = " << polar2.angle << endl;
+
+    polar polar3 = {111, 222};
+    templatefunc(polar3);   //只会调到特定版,不会调普通模板函数
+    templatefunc(polar3);   //只会调到特定版,不会调普通模板函数
+
 }
 
 void arr_test(const int arr[]) {
@@ -143,7 +160,13 @@ travel_time deal_travel(travel_time t1, travel_time t2) {
 
 void deal_polar(const polar * p, polar * pda) {
     pda->angle = sqrt(p->angle);
-    pda->distance = sqrt(p->distance);
+    pda->distance = sqrt(p->distance);  //指针操作需要用 -> 操作符
+}
+
+void fellow(polar & polar) {  //形参为引用的写法,如果是java根本就不需要加这个&号
+    cout << "polar.distance = " << polar.distance << endl; //引用操作需要用 . 操作符
+    cout << "polar.angle = " << polar.angle << endl;
+    polar.angle = 666;
 }
 
 void fill(std::array<double, seasons> * pa) {  //std:array<数组类型,数组长度>
@@ -163,3 +186,12 @@ void swapoint(int * a, int * b) {
     *a = *b;
     *b = temp;
 }
+
+template <typename T>   //普通模板函数
+void templatefunc(T & polar) {
+    cout << "this is template func:polar.angle = " << polar.angle << endl;
+}
+
+template <> void templatefunc<polar>(polar & polar) {  //模板函数的显示具体化,比普通模板函数优先级高
+    cout << "this is explicit template func: polar.distance" << polar.distance << endl;
+ }

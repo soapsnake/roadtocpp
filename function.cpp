@@ -187,11 +187,12 @@ void swapoint(int * a, int * b) {
     *b = temp;
 }
 
-template <typename T>   //普通模板函数
-void templatefunc(T & polar) {
+////普通模板函数
+template <typename T> void templatefunc(T & polar) {
     cout << "this is template func:polar.angle = " << polar.angle << endl;
 }
 
-template <> void templatefunc<polar>(polar & polar) {  //模板函数的显示具体化,比普通模板函数优先级高
+//模板函数的显示具体化,比普通模板函数优先级高
+template <> void templatefunc<polar>(polar & polar) {
     cout << "this is explicit template func: polar.distance" << polar.distance << endl;
  }

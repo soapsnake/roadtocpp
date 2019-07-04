@@ -1,6 +1,6 @@
 # roadtocpp
 ## 没有解决干净的problem:
-162,
+162,306
 
 
 ## 刷题发现的有意思的东西:
@@ -18,3 +18,16 @@
 
 3. 函数形参的vector&lt;int>最好声明成vector&lt;int> & vec 引用形式
 4. 声明一个长度m宽度为n的二维数组dp: vector<vector<int>> dp(m, vector<int>(n, 0));
+
+5. c++与java的string常用接口对比
+
+| c++ | java | 说明 |
+|----|----| ---- |
+|str.substr(i, j)| str.substring(i, j)| 截取str子串的一段
+|str[2]|str.charAt(2)|取str字串中的第3个字符
+|to_string(2) | 2.toString() | 把数字2转成字符串"2"
+|str.size()|str.length()|求str字符串的长度
+|str.push_back('2')|str += '2' | 字符串追加字符
+|reverse(str)|无(可用双指针实现) | 字符串翻转
+|str1.compare(1, str2)| str1.startsWith(str2, offset)| 比较两个字符串是否一致(可偏移)
+|stoi(str)//用起有点问题 | Integer.parseInt(str)|字符串转数字

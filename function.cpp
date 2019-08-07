@@ -1,11 +1,11 @@
 //
-// Created by 刘盾 on 2019-05-18.
+// Created by soapsnake@gmail.com on 2019-05-18.
 //
 #include <iostream>
 #include <cmath>
 #include <array>
 #include "function.h"
-
+//
 void arr_test(const int arr[]);  //定义函数的地方必须和实际函数完全一致,这里有cosnt,下边也一定得有
 
 int sum_arr(const int *begin, const int *end);  //参数为数组的开始和结束位指针

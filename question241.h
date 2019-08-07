@@ -1,5 +1,5 @@
 //
-// Created by 刘盾 on 2019-06-16.
+// Created by soapsnake@gmail.com on 2019-06-16.
 //
 
 #ifndef ROADTOCPP_QUESTION241_H

@@ -45,8 +45,6 @@ public:
 };
 
 int main() {
-
-
     string num = "112358";
     Solution solution;
     cout << "res = " << boolalpha << solution.isAdditiveNumber(num) << endl;

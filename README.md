@@ -13,7 +13,7 @@
 |vec.push_pack()| list.add()| 添加元素至最后
 |vec.pop_back()|list.remove(list.size() - 1) |删除最后一个元素
 |vec.size() | list.size() | 容器size |
-|vec[index]| list.get(index) | 取第index个元素的值
+|vec\[index]| list.get(index) | 取第index个元素的值
 |vec.empty()|list.isEmpty() | 判断容器是否为空 |
 
 3. 函数形参的vector&lt;int>最好声明成vector&lt;int> & vec 引用形式
@@ -31,3 +31,15 @@
 |reverse(str)|无(可用双指针实现) | 字符串翻转
 |str1.compare(1, str2)| str1.startsWith(str2, offset)| 比较两个字符串是否一致(可偏移)
 |stoi(str)//用起有点问题 | Integer.parseInt(str)|字符串转数字
+
+6.c++与java的数组对比
+
+| c++ | java | 说明 |
+|----|----| ---- |
+|int arr\[10]; //声明时必须指定容量| int\[] arr; //声明时不必指定容量| 声明数组(未初始化)
+|int arr\[3] = {1,2,3}; <br>int arr3[] = { 1,2,3,4};| int[] arr = {1,2,3,4};  <br> int[] arr2 = new int[]{1, 2, 3, 4};| 初始化数组
+|不允许声明和初始化换行| 允许| 声明数组(未初始化)
+|sizeof(arr)| arr.length| 获得容量
+|int arr\[2]\[3]| int\[2]\[3] arr| 二维数组定义
+
+

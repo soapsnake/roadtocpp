@@ -73,7 +73,7 @@ int main() {
     polar polar1 = {angle, range};
     polar res3;
     cout << "test polar &address" << endl;
-    deal_polar(&polar1, &res3);
+    deal_polar(&polar1, &res3);   //deal_polar函数的行参是指针类型,所以这里用了解引用符
     cout << "res3.distance: " << res3.distance << endl;
     cout << "res3.angle: " << res3.angle << endl;
 
@@ -81,7 +81,7 @@ int main() {
     polar * ppointer; //实验发现单独只声明一个指针而不进行初始化是没有办法使用的
 
     //是不是指针的使用一定要先进行初始化了???
-    polar res4;
+    polar res4; //res4是引用
     ppointer = &res4;   //指针指向一个结构变量的地址,没有这个后面的运算会没有结果,对指针的理解还是不够啊...
     cout << "test polar *pointer"<< endl;
     deal_polar(&polar1, ppointer);

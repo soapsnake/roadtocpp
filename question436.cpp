@@ -4,7 +4,7 @@
 
 using namespace std;   //名称空间编译指令,这个是函数级别的,也可以声明在👆,那么就是全局级别的
 
-
+//leetcode436
 class Solution {
 public:
     vector<int> findRightInterval(vector<vector<int>> & intervals) {

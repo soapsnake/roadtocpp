@@ -53,8 +53,8 @@ int main() {
     char mm[10] = "nijiushig";
     int res = c_in_str(mm);
 
-    char  *str = "jidsaida";
-    int res1 = c_in_str(str);
+    // char  *str = 'j';
+    // int res1 = c_in_str(str);
 
     char  *charpt = build_str('a', 10);
     cout << charpt << endl;

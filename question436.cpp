@@ -21,9 +21,3 @@ public:
         return res;
     }
 };
-
-int main() {
-    Solution so;
-    cout << so.findRightInterval(NULL) << endl;
-    return 0;
-}

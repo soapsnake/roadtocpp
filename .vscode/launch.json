@@ -10,10 +10,11 @@
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
-            "stopAtEntry": true,
+            "stopAtEntry": false,   //这个改成true,按f5执行后会在main方法入口处停住,不建议改true
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
+            "avoidWindowsConsoleRedirection": true,
             "MIMode": "lldb",
             "preLaunchTask": "clang++ build active file"
         }

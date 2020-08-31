@@ -2,7 +2,7 @@
 // Created by soapsnake@gmail.com on 2019-06-10.
 //
 
-#include "TreeNode.h"
+#include "hearders/TreeNode.h"
 #include "stack"
 
 using namespace std;

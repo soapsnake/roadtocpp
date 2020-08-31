@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <array>
-#include "function.h"
+#include "hearders/function.h"
 //
 void arr_test(const int arr[]);  //定义函数的地方必须和实际函数完全一致,这里有cosnt,下边也一定得有
 

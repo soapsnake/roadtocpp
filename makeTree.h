@@ -2,10 +2,8 @@
 // Created by soapsnake@gmail.com on 2019-10-29.
 //
 
-#include "vector"
-using namespace std;
-class Node {
 public:
+class Node {
     int val;
     vector<Node> children;
 

@@ -1,8 +1,6 @@
 //
 // Created by soapsnake@gmail.com on 2019/11/9.
 //
-
-
 #include "iostream"
 #include <cmath>
 

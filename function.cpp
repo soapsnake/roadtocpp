@@ -77,7 +77,6 @@ int main() {
     cout << "res3.distance: " << res3.distance << endl;
     cout << "res3.angle: " << res3.angle << endl;
 
-
     polar * ppointer; //实验发现单独只声明一个指针而不进行初始化是没有办法使用的
 
     //是不是指针的使用一定要先进行初始化了???

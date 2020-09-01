@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+int rand7();
 
 //leetcode470
 class Solution {

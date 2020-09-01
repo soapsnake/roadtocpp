@@ -29,5 +29,10 @@ add_executable(function function.cpp)
 add_executable(learncpp learncpp.cpp learncpp.h)
 add_executable(makeTree makeTree.cpp makeTree.h)
 add_executable(pointerTester pointerTester.cpp)
+add_executable(question412 question412.cpp)
+add_executable(question1111 question1111.cpp)
+add_executable(questions1112 questions1112.cpp)
+add_executable(question949 question949.cpp)
+add_executable(vectortester vectortester.cpp)
 
 

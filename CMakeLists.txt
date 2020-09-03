@@ -35,5 +35,7 @@ add_executable(question1111 question1111.cpp)
 add_executable(questions1112 questions1112.cpp)
 add_executable(question949 question949.cpp)
 add_executable(vectortester vectortester.cpp)
+add_executable(question220 question220.cpp)
+add_executable(question459 question459.cpp)
 
 

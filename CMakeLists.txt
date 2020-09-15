@@ -43,5 +43,7 @@ add_executable(question835 question835.cpp)
 add_executable(question1022 question1022.cpp)
 add_executable(question165 question165.cpp)
 add_executable(question299 question299.cpp)
+add_executable(question57 question57.cpp)
+add_executable(questionrober questionrober.cpp)
 
 

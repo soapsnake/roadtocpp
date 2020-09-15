@@ -2,7 +2,7 @@
 // Created by soapsnake@gmail.com on 2020/9/1.
 //
 #include "string"
-#include "vector"
+#include "vector"o
 #include "iostream"
 
 using namespace std;
@@ -11,6 +11,7 @@ using namespace std;
 class Solution {
 public:
     string largestTimeFromDigits(vector<int> &A) {
+
         sort(begin(A), end(A), greater<int>());
         do {
             if ((A[0] < 2 || (A[0] == 2 && A[1] < 4)) && A[2] < 6)

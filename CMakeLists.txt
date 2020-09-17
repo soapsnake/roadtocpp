@@ -49,3 +49,4 @@ add_executable(questionrober questionrober.cpp)
 
 
 add_executable(questionlastword questionlastword.cpp)
+add_executable(question1041 question1041.cpp)

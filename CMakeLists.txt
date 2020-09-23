@@ -52,3 +52,4 @@ add_executable(question1041 question1041.cpp)
 add_executable(question421 question421.cpp)
 
 add_executable(question1094 question1094.cpp)
+add_executable(questiongasstation questiongasstation.cpp)

@@ -50,3 +50,5 @@ add_executable(question1291 question1291.cpp)
 add_executable(question980 question980.cpp)
 add_executable(question1041 question1041.cpp)
 add_executable(question421 question421.cpp)
+
+add_executable(question1094 question1094.cpp)

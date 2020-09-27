@@ -48,7 +48,9 @@
 
 | c++ | java | 说明 |
 |:----:|:-------:|:----:|
-|不允许声明和初始化换行|Map<x, y> map = new HashMap<>();|声明数组(未初始化)
+|unordered_map<string, Node *> map;|Map<x, y> map = new HashMap<>();|声明map|
+|map[key] = value;|map.put(key,value);|map添加元素|
+|V value = map[key];|V value = map.get(key);|map根据key获取value|
 
 
 

@@ -50,6 +50,7 @@ public:
         return res;
     }
 
+//cpp版本的union find算法
 private:
     struct Node {
         Node *parent;

@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 
 project(roadtocpp)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 set(CMAKE_CXX_STANDARD 11)
 
 #add_executable(roadtocpp first.c myfirst.cpp myfirst.h dynamic/dynamic.cpp)
@@ -58,6 +59,7 @@ add_executable(question_largest_number question_179.cpp)
 add_executable(question_179 question_179.cpp)
 add_executable(question_temo question_temo.cpp)
 add_executable(quesiton_division quesiton_division.cpp)
+add_executable(merge_k_sorted_arr merge_k_sorted_arr.cpp)
 add_executable(question_word_break question_word_break.cpp)
 add_executable(missing_positive missing_positive.cpp)
 add_executable(question_recent_counter question_recent_counter.cpp)

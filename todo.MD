@@ -8,10 +8,11 @@
 2. vector与java中list的api对比
 
 | c++ | java | 说明 |
-|----|----| ---- |
+|:----:|:----:|:----:|
 |vector&lt;int> vec| List&lt;Integer> list |定义
+|vector&lt;int>  res(size, 0);<br>res[x]=y;| List&lt;Integer> list=new ArrayList<>();<br>list.add(i,x); |c++的vector要想使用[i]<br>进行赋值必须初始化<br>大小并且赋初始值<br>详见merge_k_sorted_arr
 |vec.push_pack()| list.add()| 添加元素至最后
-|vec.pop_back()|list.remove(list.size() - 1) |删除最后一个元素
+|vec.pop_back()|list.remove(list.size()-1) |删除最后一个元素
 |vec.size() | list.size() | 容器size |
 |vec\[index]| list.get(index) | 取第index个元素的值
 |vec.empty()|list.isEmpty() | 判断容器是否为空 |

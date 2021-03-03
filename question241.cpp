@@ -5,6 +5,7 @@
 #include <string>
 #include "question241.h"
 #include "vector"
+
 using namespace std;
 
 class Solution {
@@ -21,9 +22,9 @@ public:
             if (temp == '+' || temp == '-' || temp == '*') {
                 int tempInt = 0;
                 left = diffWaysToCompute(input.substr(0, i));
-                right = diffWaysToCompute(input.substr(i+1));
+                right = diffWaysToCompute(input.substr(i + 1));
                 for (int j : left) {
-                    for(int k : right) {
+                for (int k : right) {
                         if (temp == '+')
                             res.push_back(j + k);
                         else if (temp == '-')

@@ -3,6 +3,7 @@
 //
 #include "stack"
 #include "string"
+#include "iostream"
 using namespace std;
 
 class Solution {
@@ -24,5 +25,6 @@ class Solution {
 
 int main() {
   Solution solution;
+  cout << "hello world" << endl;
   solution.scoreOfParentheses("1234");
 }

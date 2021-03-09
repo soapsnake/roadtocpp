@@ -1,6 +1,7 @@
 //
 // Created by soapsnake@gmail.com on 2019-06-25.
 //
+#include <iostream>
 #include "vector"
 
 using namespace std;
@@ -28,3 +29,10 @@ public:
         return false;
     }
 };
+
+int main() {
+  cout << "hello world this is question74" << endl;
+  Solution solution;
+  vector<vector<int>> res;
+  cout << solution.searchMatrix(res, 3) << endl;
+}

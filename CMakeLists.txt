@@ -6,6 +6,9 @@ project(roadtocpp)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 set(CMAKE_CXX_STANDARD 11)
 
+include_directories(.)
+
+
 #add_executable(roadtocpp first.c myfirst.cpp myfirst.h dynamic/dynamic.cpp)
 add_executable(myfirst myfirst.cpp)
 add_executable(question187 question187.cpp)
@@ -71,3 +74,5 @@ add_executable(detect_list_cycle detect_list_cycle.cpp)
 add_executable(question240 question240.cpp)
 add_executable(question856 question856.cpp)
 add_executable(question160 question160.cpp)
+add_executable(question623 question623.cpp)
+add_executable(question_714 question_714.cpp)

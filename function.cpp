@@ -5,6 +5,7 @@
 #include <cmath>
 #include <array>
 #include "hearders/function.h"
+
 //
 void arr_test(const int arr[]);  //定义函数的地方必须和实际函数完全一致,这里有cosnt,下边也一定得有
 
@@ -12,39 +13,43 @@ int sum_arr(const int *begin, const int *end);  //参数为数组的开始和结
 
 int c_in_str(const char *str);  //c风格的字符串,其实就是一个字符数组
 
-char * build_str(char c = 'a', int n = 1); //返回指针的函数, 这里指定了默认值,如果不传该参数,那么就会被默认赋这个值
+char *build_str(char c = 'a', int n = 1); //返回指针的函数, 这里指定了默认值,如果不传该参数,那么就会被默认赋这个值
 
-void swap(int & a, int & b);  //以引用作为形参的函数
-void swapoint(int * a, int * b);  //指针版交换变量函数
+void swap(int &a, int &b);  //以引用作为形参的函数
+void swapoint(int *a, int *b);  //指针版交换变量函数
 
 struct travel_time {  //结构体与对象最大的不同,就是调用函数时传递的是结构体的一份副本,而不像对象那样传递的是引用
     int hours;
     int range;
 };
+
 travel_time deal_travel(travel_time t1, travel_time t2);  //传递结构体
 
 //polar结构体的定义位于function.h中
-void deal_polar(const polar * p,  polar * pda);   //传递结构体的地址指针
+void deal_polar(const polar *p, polar *pda);   //传递结构体的地址指针
 
 //内联函数了??????todo
 
 const int seasons = 4;
 const std::array<std::string, seasons> snames = {"Spring", "Summber", "Fall", "Winter"};
 
-void fill(std::array<double, seasons> * pa);  //这句写在using前,就必须加std::了,否则编译报错
+void fill(std::array<double, seasons> *pa);  //这句写在using前,就必须加std::了,否则编译报错
 using namespace std;
-void fill(array<double, seasons> * pa);  //写在using后就不用写std::了,这很现实
 
-void fellow(polar & polar);
+void fill(array<double, seasons> *pa);  //写在using后就不用写std::了,这很现实
 
-template <typename T>  //type是泛型关键词,也可以写成class,这里的T就是泛型
-void templatefunc(T & polar);   //模板函数,含有泛型
+void fellow(polar &polar);
 
-template <> void templatefunc<polar>(polar & polar); //模板函数的显示具体化,比普通模板函数优先级高
+template<typename T>
+//type是泛型关键词,也可以写成class,这里的T就是泛型
+void templatefunc(T &polar);   //模板函数,含有泛型
+
+template<>
+void templatefunc<polar>(polar &polar); //模板函数的显示具体化,比普通模板函数优先级高
 
 int main() {
 
-    int arr[3] = {2,2,3};   //c++ 初始化数组的方法,不能像java一样写int[], arr[3]定义数组长度而不是取值
+    int arr[3] = {2, 2, 3};   //c++ 初始化数组的方法,不能像java一样写int[], arr[3]定义数组长度而不是取值
     arr_test(arr);
     int total = 0;
     total = sum_arr(arr, arr + 3);
@@ -56,7 +61,7 @@ int main() {
     // char  *str = 'j';
     // int res1 = c_in_str(str);
 
-    char  *charpt = build_str('a', 10);
+    char *charpt = build_str('a', 10);
     cout << charpt << endl;
 
 //    delete [] charpt;   //这种释放指针内存的方法也可以
@@ -77,18 +82,18 @@ int main() {
     cout << "res3.distance: " << res3.distance << endl;
     cout << "res3.angle: " << res3.angle << endl;
 
-    polar * ppointer; //实验发现单独只声明一个指针而不进行初始化是没有办法使用的
+    polar *ppointer; //实验发现单独只声明一个指针而不进行初始化是没有办法使用的
 
     //是不是指针的使用一定要先进行初始化了???
     polar res4; //res4是引用
     ppointer = &res4;   //指针指向一个结构变量的地址,没有这个后面的运算会没有结果,对指针的理解还是不够啊...
-    cout << "test polar *pointer"<< endl;
+    cout << "test polar *pointer" << endl;
     deal_polar(&polar1, ppointer);
     cout << "ppointer->angle: " << ppointer->angle << endl;
     cout << "ppointer->distance: " << ppointer->distance << endl;
 
 
-    string * strpt;
+    string *strpt;
     string str123 = "123";
     strpt = &str123;
     cout << "strpt = " << strpt << endl;
@@ -96,7 +101,7 @@ int main() {
 
 
     int rats = 101;
-    int & rodents = rats;  //rodents 现在是指向rats的引用,c++中的引用可以指向任意变量,无论是否对象
+    int &rodents = rats;  //rodents 现在是指向rats的引用,c++中的引用可以指向任意变量,无论是否对象
     cout << "rodents = " << rodents << endl;
     rodents = 120;  //通过rodents改变了变量rats的值
     cout << "after rodents change rats = " << rats << endl;
@@ -125,10 +130,10 @@ void arr_test(const int arr[]) {
 //    arr[0] = 1;   //编译错误,arr[]在这个函数里是只读的,不能修改值
 }
 
-int sum_arr(const int * begin, const int * end) {  //只传两个指针进来,完全看不到数组
+int sum_arr(const int *begin, const int *end) {  //只传两个指针进来,完全看不到数组
     const int *p;
     int total = 0;
-    for (p = begin; p < end ; p++) {
+    for (p = begin; p < end; p++) {
         total = total + *p;
     }
     return total;
@@ -140,8 +145,8 @@ int c_in_str(const char *str) {
     return 0;
 }
 
-char * build_str(char c, int n) {
-    char *pstr = new char[n+1];  //pstr指针的作用域为这个函数,因此在这个函数返回后其指向的内存将被回收
+char *build_str(char c, int n) {
+    char *pstr = new char[n + 1];  //pstr指针的作用域为这个函数,因此在这个函数返回后其指向的内存将被回收
 
     pstr[n] = '\0';   //c风格字符串最后一位一定是\0
 
@@ -157,41 +162,43 @@ travel_time deal_travel(travel_time t1, travel_time t2) {
     return total;
 }
 
-void deal_polar(const polar * p, polar * pda) {
+void deal_polar(const polar *p, polar *pda) {
     pda->angle = sqrt(p->angle);
     pda->distance = sqrt(p->distance);  //指针操作需要用 -> 操作符
 }
 
-void fellow(polar & polar) {  //形参为引用的写法,如果是java根本就不需要加这个&号
+void fellow(polar &polar) {  //形参为引用的写法,如果是java根本就不需要加这个&号
     cout << "polar.distance = " << polar.distance << endl; //引用操作需要用 . 操作符
     cout << "polar.angle = " << polar.angle << endl;
     polar.angle = 666;
 }
 
-void fill(std::array<double, seasons> * pa) {  //std:array<数组类型,数组长度>
+void fill(std::array<double, seasons> *pa) {  //std:array<数组类型,数组长度>
     for (int i = 0; i < pa->size(); ++i) {
-        
+
     }
 }
 
-void swap(int & a, int & b) {
+void swap(int &a, int &b) {
     int temp = a;   //temp = 10
     a = b;   //a = 15
     b = temp;   //b = 10
 }
 
-void swapoint(int * a, int * b) {
+void swapoint(int *a, int *b) {
     int temp = *a;   //*a才能拿到变量a的值,因为现在传进来的a是一个内存地址
     *a = *b;
     *b = temp;
 }
 
 ////普通模板函数
-template <typename T> void templatefunc(T & polar) {
+template<typename T>
+void templatefunc(T &polar) {
     cout << "this is template func:polar.angle = " << polar.angle << endl;
 }
 
 //模板函数的显示具体化,比普通模板函数优先级高
-template <> void templatefunc<polar>(polar & polar) {
+template<>
+void templatefunc<polar>(polar &polar) {
     cout << "this is explicit template func: polar.distance" << polar.distance << endl;
- }
+}

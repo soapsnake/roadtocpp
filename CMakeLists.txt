@@ -1,10 +1,13 @@
 # cmake_minimum_required(VERSION <specify CMake version here>)
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.14.5)
 
 project(roadtocpp)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 set(CMAKE_CXX_STANDARD 11)
+
+include_directories(.)
+
 
 #add_executable(roadtocpp first.c myfirst.cpp myfirst.h dynamic/dynamic.cpp)
 add_executable(myfirst myfirst.cpp)
@@ -68,4 +71,10 @@ add_executable(stock_problems stock_problems.cpp)
 add_executable(question_rotate_list question_rotate_list.cpp)
 add_executable(biner_search biner_search.cpp)
 add_executable(detect_list_cycle detect_list_cycle.cpp)
+add_executable(question240 question240.cpp)
+add_executable(question856 question856.cpp)
+add_executable(question160 question160.cpp)
+add_executable(question623 question623.cpp)
+add_executable(question_714 question_714.cpp)
+add_executable(question_496 question_496.cpp)
 add_executable(convert_list_biner_value convert_list_biner_value.cpp)

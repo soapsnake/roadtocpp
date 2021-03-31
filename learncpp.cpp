@@ -43,7 +43,6 @@ void displayResult() {
 int compare(int x, int y ,int z) {
     int res = x > y > z;
     int c = 9 + (x == y);   //c++ 中,true == 1, false == 0
-
     if (x == y) {
 
     }

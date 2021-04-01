@@ -10,7 +10,7 @@
 | c++ | java | 说明 |
 |:----:|:----:|:----:|
 |vector&lt;int> vec| List&lt;Integer> list |定义
-|vector&lt;int>  res(size, 0);<br>res[x]=y;| List&lt;Integer> list=new ArrayList<>();<br>list.add(i,x); |c++的vector要想使用[i]<br>进行赋值必须初始化<br>大小并且赋初始值<br>详见merge_k_sorted_arr
+|vector&lt;int>  res(size, 0);<br>res[x]=y;| List&lt;Integer> list=new ArrayList<>();<br>list.add(i,x); |c++的vector要想使用[i]索引进行取值<br>必须初始化size,但如果只是使用push_back添加新元素的话<br>就没必要初始化了,声明后就可以使用<br>详见merge_k_sorted_arr
 |vec.push_pack()| list.add()| 添加元素至最后
 |vec.pop_back()|list.remove(list.size()-1) |删除最后一个元素
 |vec.size() | list.size() | 容器size |

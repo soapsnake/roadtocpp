@@ -53,5 +53,9 @@
 |map[key] = value;|map.put(key,value);|map添加元素|
 |V value = map[key];|V value = map.get(key);|map根据key获取value|
 
+8.c++中的&符号和*符号
 
+| & | * | 说明 |
+|:----:|:-------:|:----:|
+|相当于Java中的引用:void func(Person &p)<br>含义和Java中的void func(Person p)完全一致|指针||
 

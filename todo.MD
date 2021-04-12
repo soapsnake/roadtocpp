@@ -17,6 +17,9 @@
 |vec\[index]| list.get(index) | 取第index个元素的值
 |vec.empty()|list.isEmpty() | 判断容器是否为空 |
 |sort(begin(vec),end(vec))|list.sort() | 对容器进行排序(详见question_179) |
+|vector<vector<int>> cache(m, vector<int>(n, 0));|int[][] cache = new int[m][n]; | 二维数组初始化 |
+
+
 
 3. 函数形参的vector&lt;int>最好声明成vector&lt;int> & vec 引用形式
 4. 声明一个长度m宽度为n的二维数组dp: vector<vector<int>> dp(m, vector<int>(n, 0));

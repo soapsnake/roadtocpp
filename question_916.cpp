@@ -37,6 +37,11 @@ public:
         for (char c : word) {
             res[c - 'a']++;
         }
+
+        if (true) {
+
+        }
         return res;
     }
+
 };

@@ -9,6 +9,7 @@
 
 using namespace std;
 
+//leetcode936
 class solution {
  private:
   bool canReplace(string &target, string &stamp, int start) {
@@ -62,4 +63,6 @@ class solution {
 
 int main() {
   cout << "this is question_936" << endl;
+
+
 }

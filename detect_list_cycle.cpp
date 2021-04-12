@@ -8,14 +8,14 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        if (head == NULL || head->next == NULL) return NULL;
+        if (head == nullptr || head->next == nullptr) return nullptr;
         ListNode *firstp = head;
         ListNode *secondp = head;
         bool isCycle = false;
 
-        while (firstp != NULL && secondp != NULL) {
+        while (firstp != nullptr && secondp != nullptr) {
             firstp = firstp->next;
-            if (secondp->next == NULL) return NULL;
+            if (secondp->next == nullptr) return nullptr;
             secondp = secondp->next->next;
 
             //快慢指针相遇表明出现了环路
@@ -25,7 +25,7 @@ public:
             }
         }
 
-        if (!isCycle) return NULL;
+        if (!isCycle) return nullptr;
         firstp = head;
         while (firstp != secondp) {
             firstp = firstp->next;

@@ -48,3 +48,6 @@ public:
         return max;
     }
 };
+
+int main() {
+}

@@ -33,7 +33,7 @@
 |to_string(2) | 2.toString() | 把数字2转成字符串"2"
 |str.size()|str.length()|求str字符串的长度
 |str.push_back('2')|str += '2' | 字符串追加字符
-|reverse(str)|无(可用双指针实现) | 字符串翻转
+|reverse(str.start(), str.end())|无(可用双指针实现,或者StringBuilder的revers()) | 字符串翻转
 |str1.compare(1, str2)| str1.startsWith(str2, offset)| 比较两个字符串是否一致(可偏移)
 |stoi(str)//用起有点问题 | Integer.parseInt(str)|字符串转数字
 |str.erase(0,1) | str.replace(0,"")|删除第一个字符

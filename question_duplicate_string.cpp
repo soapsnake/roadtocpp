@@ -15,15 +15,14 @@ public:
             if (stack.empty() || stack.top().first != c) {
                 stack.push(pair<char, int>(c, 1));
             } else {
-                pair<char, int> p = stack.top();
-                if (p.second != k - 1) {
-                    p.second++;
-                } else {
+                pair<char, int> &p = stack.top();
+                if (p.second != k - 1)
+                    ++p.second;
+                else
                     stack.pop();
-                }
             }
         }
-        string res = "";
+        string res;
         while (!stack.empty()) {
             while (stack.top().second-- > 0) {
                 res.push_back(stack.top().first);

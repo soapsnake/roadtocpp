@@ -4,7 +4,6 @@
 
 #include "question221.h"
 
-
 int main() {
 
     Solution solution;

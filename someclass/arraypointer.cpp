@@ -22,7 +22,6 @@ int main() {
         p[k] = q[k];
     }
 
-
     return 0;
 }
 

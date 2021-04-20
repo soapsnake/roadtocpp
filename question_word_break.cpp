@@ -19,9 +19,8 @@ Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
  * */
 class Solution {
-public:
-    bool wordBreak(string s, vector<string>& wordDict) {
-        
+ public:
+  bool wordBreak(string s, vector<string> &wordDict) {
 
-    }
+  }
 };

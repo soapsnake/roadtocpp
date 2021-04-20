@@ -19,8 +19,8 @@ void swap(int &a, int &b);  //以引用作为形参的函数
 void swapoint(int *a, int *b);  //指针版交换变量函数
 
 struct travel_time {  //结构体与对象最大的不同,就是调用函数时传递的是结构体的一份副本,而不像对象那样传递的是引用
-    int hours;
-    int range;
+  int hours;
+  int range;
 };
 
 travel_time deal_travel(travel_time t1, travel_time t2);  //传递结构体
@@ -92,13 +92,11 @@ int main() {
     cout << "ppointer->angle: " << ppointer->angle << endl;
     cout << "ppointer->distance: " << ppointer->distance << endl;
 
-
     string *strpt;
     string str123 = "123";
     strpt = &str123;
     cout << "strpt = " << strpt << endl;
     cout << "*strpt = " << *strpt << endl;
-
 
     int rats = 101;
     int &rodents = rats;  //rodents 现在是指向rats的引用,c++中的引用可以指向任意变量,无论是否对象
@@ -113,7 +111,6 @@ int main() {
     cout << "after swap, a = " << a << " b = " << b << endl;
     swapoint(&a, &b);   //指针作为形参的函数,传值的时候必须传递变量地址
     cout << "after pointer swap, a = " << a << " b = " << b << endl;
-
 
     polar polar2 = {123, 456};  //结构体的初始化
     fellow(polar2);  //结构体也是能够用引用来传参的

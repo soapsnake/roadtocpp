@@ -5,17 +5,17 @@
 class Solution {
  public:
   int fib(int n) {
-    int first = 0;
-    int second = 1;
-    if (n == 1) {
-      return 0;
-    }
+      int first = 0;
+      int second = 1;
+      if (n == 1) {
+          return 0;
+      }
 
-    while (n-- > 1) {
-      int third = first + second;
-      first = second;
-      second = third;
-    }
-    return second;
+      while (n-- > 1) {
+          int third = first + second;
+          first = second;
+          second = third;
+      }
+      return second;
   }
 };

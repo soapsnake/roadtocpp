@@ -30,7 +30,7 @@ int main() {
 
 
     int updates = 7;
-    int* p_updates;  //p_updates变量的类型是指针,这里*前面的int表明这个指针指向的是一个int型变量,这个指针只能指向int值
+    int *p_updates;  //p_updates变量的类型是指针,这里*前面的int表明这个指针指向的是一个int型变量,这个指针只能指向int值
 
     cout << "the p_updates = " << p_updates << endl;
 
@@ -47,12 +47,12 @@ int main() {
 //    p_updates = updates2;    //不能把int型指针指向一个long类型变量
 
     int nights = 1001;
-    int* pt = new int;
+    int *pt = new int;
     *pt = 1001;
     cout << "the nights address = " << &nights << endl;
     cout << "the pt = " << pt << endl;   //很有意思,pt指针指向的值和nights一样,但是他们的内存地址不一样
 
-    int* parr = new int[3];   //无名数组,只有一个指针指向它
+    int *parr = new int[3];   //无名数组,只有一个指针指向它
     parr[0] = 7;      //指针当成数组名字使用
     parr[1] = 24;
     parr[2] = 83;
@@ -63,8 +63,7 @@ int main() {
     return 0;
 }
 
-
-int wocao (int n) {
+int wocao(int n) {
     std::cout << "n is " << n << std::endl;
     return n * 2;
 }

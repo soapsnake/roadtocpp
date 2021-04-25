@@ -4,6 +4,8 @@
 #include <vector>
 #include <unordered_map>
 using namespace std;
+
+//leetcode wall bricks
 class Solution {
  public:
   int leastBricks(vector<vector<int>>& wall) {
@@ -22,14 +24,4 @@ class Solution {
       return wall.size() - count;
   }
 
-  int leastBricks2(vector<vector<int>> &wall) {
-      unordered_map<int, int> map;
-      int count = 0, m = wall.size();
-      for (int i = 0; i < wall.size(); i++) {
-          for (int j = 0, sum = 0; j < wall[i].size() - 1; j++) {
-              count = max(count, ++map[sum += wall[i][j]]);
-          }
-      }
-      return m - count;
-  }
 };

@@ -15,50 +15,49 @@
 using namespace std;
 
 class Node {
-public:
-    int val;
-    vector<Node*> children;
+ public:
+  int val;
+  vector<Node *> children;
 
-    Node() {}
+  Node() {}
 
-    Node(int _val, vector<Node*> _children) {
+  Node(int _val, vector<Node *> _children) {
       val = _val;
       children = std::move(_children);
-    }
+  }
 };
 
 class Solution {
-public:
-     Node makeTree() {
-        int layer = rand();
-        Node root;
-        root.val = rand();
-        root.children =  makeChildrens2(1, layer);
-        return root;
-    }
+ public:
+  Node makeTree() {
+      int layer = rand();
+      Node root;
+      root.val = rand();
+      root.children = makeChildrens2(1, layer);
+      return root;
+  }
 
-     vector<Node*> makeChildrens2(int cur, int layer) {
-       vector<Node *> res;
-         return res;
-     }
+  vector<Node *> makeChildrens2(int cur, int layer) {
+      vector<Node *> res;
+      return res;
+  }
 
-     vector<Node*> makeChildrens(int cur, int layer) {
-        vector<Node*> vector;
-        if (cur >= layer) {
-            return vector;
-        }
+  vector<Node *> makeChildrens(int cur, int layer) {
+      vector<Node *> vector;
+      if (cur >= layer) {
+          return vector;
+      }
 
-        int num = rand();
-        for (int i = 0; i < num; ++i) {
-            Node *node = new Node;
-            node->val = rand();
-            node->children = makeChildrens(cur + 1, layer);
-            vector.push_back(node);
-        }
-        return vector;
-    }
+      int num = rand();
+      for (int i = 0; i < num; ++i) {
+          Node *node = new Node;
+          node->val = rand();
+          node->children = makeChildrens(cur + 1, layer);
+          vector.push_back(node);
+      }
+      return vector;
+  }
 };
-
 
 int main() {
     Solution solution;

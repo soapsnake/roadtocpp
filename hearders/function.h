@@ -6,7 +6,7 @@
 #define ROADTOCPP_FUNCTION_H
 
 #endif //ROADTOCPP_FUNCTION_H
-struct polar{
-    double distance;
-    double angle;
+struct polar {
+  double distance;
+  double angle;
 };

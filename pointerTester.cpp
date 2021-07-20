@@ -7,8 +7,8 @@
 using namespace std;
 
 int main() {
-    int * pi;
-    char * pc;
+    int *pi;
+    char *pc;
 
     pi = new int;
     if (pi == NULL) {
@@ -34,13 +34,9 @@ int main() {
     delete pi;
     delete pc;
 
-
     cout << "after delete the pointer  int = " << *pi << " char = " << *pc << endl;
 
-
-
-
-    pi = (int *)malloc(sizeof(int));   //c风格的申请动态内存方式,注意这种方式不要和new delete的方式混用,否则容易产生各种问题
+    pi = (int *) malloc(sizeof(int));   //c风格的申请动态内存方式,注意这种方式不要和new delete的方式混用,否则容易产生各种问题
     *pi = 123432;
     cout << "after second malloc int pointer *pi = " << *pi << endl;
     free(pi);   //不知道为啥没有效果

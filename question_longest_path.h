@@ -5,10 +5,8 @@
 #ifndef ROADTOCPP_QUESTION_LONGEST_PATH_H
 #define ROADTOCPP_QUESTION_LONGEST_PATH_H
 
-
 class question_longest_path {
 
 };
-
 
 #endif //ROADTOCPP_QUESTION_LONGEST_PATH_H

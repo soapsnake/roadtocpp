@@ -5,8 +5,8 @@
 #include "ListNode.h"
 
 class Solution {
-public:
-    ListNode* rotateRight(ListNode* head, int k) {
+ public:
+  ListNode *rotateRight(ListNode *head, int k) {
 
-    }
+  }
 };

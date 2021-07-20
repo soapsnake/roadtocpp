@@ -5,10 +5,8 @@
 #ifndef ROADTOCPP_MYFIRST_H
 #define ROADTOCPP_MYFIRST_H
 
-
-class myfirst{
+class myfirst {
 
 };
-
 
 #endif //ROADTOCPP_MYFIRST_H

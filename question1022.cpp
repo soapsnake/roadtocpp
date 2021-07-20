@@ -6,8 +6,8 @@
 using namespace std;
 
 class Solution {
-public:
-    int sumRootToLeaf(TreeNode *root) {
+ public:
+  int sumRootToLeaf(TreeNode *root) {
       o
-};
+  };
 

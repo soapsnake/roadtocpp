@@ -5,10 +5,8 @@
 #ifndef ROADTOCPP_QUESTION241_H
 #define ROADTOCPP_QUESTION241_H
 
-
 class question241 {
 
 };
-
 
 #endif //ROADTOCPP_QUESTION241_H

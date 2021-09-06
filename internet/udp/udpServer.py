@@ -10,5 +10,5 @@ print ("The server is ready to receive....")
 while True:
     message, clientAddress = serverSocket.recvfrom(2048)
     modifiedMessage = message.decode()
-    print ("got message from some client: " + modifiedMessage)
+    print ("got message from some client: " + modifiedMessage + " client Addr is: ")
     serverSocket.sendto(modifiedMessage.upper().decode(), clientAddress)

@@ -4,3 +4,22 @@
 *.dSYM
 /*.dSYM
 .vscode/*
+/.vscode/
+.DS_Store
+
+# vscode ================================
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
